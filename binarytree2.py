@@ -163,6 +163,17 @@ def build_tree(elements):
 if __name__ == '__main__':
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
     numbers_tree.delete (20)
-    
     print()
     print("After deleting the element 20", numbers_tree.in_order_traversal())
+    print()
+    print()
+    numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
+    numbers_tree.delete(9)
+    print()
+    print("After deleting the element 9 ",numbers_tree.in_order_traversal())  
+    print()
+    print()
+    numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
+    numbers_tree.delete(17)
+    print()
+    print("After deleting the element 17 ",numbers_tree.in_order_traversal())  
