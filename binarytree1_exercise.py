@@ -114,3 +114,4 @@ if __name__ == '__main__':
     numbers_tree = build_tree(numbers)
     
     print("In order traversal:", numbers_tree.in_order_traversal())
+    print ("Pre order traversal:", numbers_tree.pre_order_traversal())
