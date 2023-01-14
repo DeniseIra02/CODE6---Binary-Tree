@@ -78,7 +78,25 @@ class BinarySearchTreeNode:
 
         return elements
 
+    #method for postorder   
+    def post_order_traversal(self):
+        #add list 
+        elements = []
+        
+        #visit left tree
+        if self.left:
+            elements += self.left.post_order_traversal()
+        
+        #visit right tree
+        if self.right:
+            elements += self.right.post_order_traversal()
+
+        #visit base node
+        elements.append(self.data)
+
+        return elements
     
+
 #method that takes elements as an input and build a tree
 def build_tree(elements):
     # assigning the first element as a root node
