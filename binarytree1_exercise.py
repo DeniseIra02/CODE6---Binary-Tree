@@ -96,6 +96,14 @@ class BinarySearchTreeNode:
 
         return elements
     
+    #method to find the highest or largest number
+    def find_max(self):
+        #since the rule is all elements that is greater than the current node
+        #its always on the right subtree
+        if self.right is None:
+            return self.data
+        return self.right.find_max() 
+    
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
