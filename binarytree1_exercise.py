@@ -111,6 +111,16 @@ class BinarySearchTreeNode:
         if self.left is None:
             return self.data
         return self.left.find_min()
+    
+    #method to sum up all the elements in binary tree
+    def calculate_sum(self):
+        #check if the left tree has value and sum up all in the left
+        left_sum = self.left.calculate_sum() if self.left else 0 
+        #check if the right tree has value and sum up all in the right
+        right_sum = self.right.calculate_sum() if self.right else 0
+        #sum up all
+        return self.data + left_sum + right_sum
+
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
