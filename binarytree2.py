@@ -150,6 +150,7 @@ class BinarySearchTreeNode:
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
+    print("Build tree with these elements:", elements)
     # assigning the first element as a root node
     root = BinarySearchTreeNode(elements[0])
 
@@ -160,3 +161,8 @@ def build_tree(elements):
 
 #main
 if __name__ == '__main__':
+    numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
+    numbers_tree.delete (20)
+    
+    print()
+    print("After deleting the element 20", numbers_tree.in_order_traversal())
