@@ -42,6 +42,10 @@ class BinarySearchTreeNode:
             elements += self.right.in_order_traversal()
 
         return elements
+    
+    #method to search some value
+    def search(self,val):
+        
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
@@ -57,5 +61,12 @@ def build_tree(elements):
 if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree = build_tree(numbers)
-    
+    #in sorting order 
     print(numbers_tree.in_order_traversal())
+
+# if __name__ == '__main__':
+#     #with duplicate elements
+#     numbers = [17, 4, 1, 20, 9, 23, 18, 34, 8, 4, 17]
+#     numbers_tree = build_tree(numbers)
+#     #in sorting order 
+#     print(numbers_tree.in_order_traversal())
