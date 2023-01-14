@@ -16,13 +16,13 @@ class BinarySearchTreeNode:
         if data < self.data: 
             #add data in left subtree
             if self.left: #check if the left element has value
-                self.left.add_child(data) #call child method
+                self.left.add_child(data) #call child method (recursion)
             else:
                 self.left = BinarySearchTreeNode(data)
         else:
             #add data in right subtree
             if self.right: #check if the right element has value
-                self.right.add_child(data) #call child method
+                self.right.add_child(data) #call child method (recursion)
             else:
                 self.right = BinarySearchTreeNode(data)
     
@@ -51,7 +51,8 @@ class BinarySearchTreeNode:
         if val < self.data:
             #val might be on left subtree
             if self.left: #check if it has any content 
-                pass
+                self.left.search(val) #search method (recursion)
+                
             else:
                 return False
         
