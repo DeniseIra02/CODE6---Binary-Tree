@@ -45,6 +45,15 @@ class BinarySearchTreeNode:
     
     #method to search some value
     def search(self,val):
+        if self.data == val: #check if the self.data is the same as the value
+            return True
+
+        if val < self.data:
+            #val might be on left subtree
+            if self.left: #check if it has any content 
+                pass
+            else:
+                return False
         
 
 #method that takes elements as an input and build a tree
