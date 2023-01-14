@@ -25,3 +25,7 @@ class BinarySearchTreeNode:
                 self.left.add_child(data) #call child method
             else:
                 self.right = BinarySearchTreeNode(data)
+    
+    #method that return the list of elements in binary tree in specific order       
+    def in_order_traversal(self):
+    
