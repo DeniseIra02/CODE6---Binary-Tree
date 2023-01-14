@@ -11,3 +11,9 @@ class BinarySearchTreeNode:
     def add_child(self, data):
         if data == self.data: #see if the value already exists
             return
+
+        #if the data is less than self.data
+        if data < self.data: 
+            #add data in left subtree
+        else:
+            #add data in right subtree
