@@ -134,10 +134,19 @@ def build_tree(elements):
 
 #main
 if __name__ == '__main__':
+    print()
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     
     numbers_tree = build_tree(numbers)
     
+    print("Numbers:", numbers)
+    print()
+    print("Min/smallest/lowest:",numbers_tree.find_min())
+    print("Max/largest/highest:",numbers_tree.find_max())
+    print("Sum/total:", numbers_tree.calculate_sum())
+    print()
     print("In order traversal:", numbers_tree.in_order_traversal())
-    print ("Pre order traversal:", numbers_tree.pre_order_traversal())
-    print ("Post order traversal:", numbers_tree.post_order_traversal())
+    print("Pre order traversal:", numbers_tree.pre_order_traversal())
+    print("Post order traversal:", numbers_tree.post_order_traversal())
+    
+    
