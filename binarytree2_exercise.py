@@ -138,16 +138,16 @@ class BinarySearchTreeNode:
             if self.left is None: #if it has no leftsubtree then it has right subtree
                 return self.right
             if self.right is None: #if it has no rightsubtree then it has left subtree
-                return self.left
+                return self.right
 
-            #from the rightsubtree find the minimum value
-            min_val = self.right.find_min()
-            #the minimum value will be put in the current node
-            self.data = min_val
+            #from the left subtree find the maximum value
+            max_val = self.left.find_max()
+            #the maximum value will be put in the current node
+            self.data = max_val
             #delete the duplicate
-            self.right = self.right.delete(min_val)
-        
-        return self 
+            self.left = self.left.delete(max_val)
+
+        return self
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
@@ -165,18 +165,18 @@ if __name__ == '__main__':
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
     numbers_tree.delete (20)
     print()
-    print("After deleting the element 20:", numbers_tree.post_order_traversal())
+    print("After deleting the element 20:", numbers_tree.in_order_traversal())
     print()
     print()
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
     numbers_tree.delete(9)
     print()
-    print("After deleting the element 9: ",numbers_tree.post_order_traversal())  
+    print("After deleting the element 9: ",numbers_tree.in_order_traversal())  
     print()
     print()
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
     numbers_tree.delete(17)
     print()
-    print("After deleting the element 17:",numbers_tree.post_order_traversal())
+    print("After deleting the element 17:",numbers_tree.in_order_traversal())
     
    
