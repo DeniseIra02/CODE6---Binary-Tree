@@ -9,5 +9,5 @@ class BinarySearchTreeNode:
      
     #method of checking the value 
     def add_child(self, data):
-        if data == self.data:
+        if data == self.data: #see if the value already exists
             return
