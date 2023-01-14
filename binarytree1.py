@@ -76,9 +76,12 @@ def build_tree(elements):
 
 #main
 if __name__ == '__main__':
-    countries = ["India","Pakistan","Germany", "USA","China","India","UK","USA"]
+    countries = ["India","Pakistan","Germany", "USA", "China", "India", "UK", "USA"]
     country_tree = build_tree(countries)
 
     print("UK is in the list? ", country_tree.search("UK"))
     print("Sweden is in the list? ", country_tree.search("Sweden"))
+    
+    #alphabetical order
+    print(country_tree.in_order_traversal())
     
