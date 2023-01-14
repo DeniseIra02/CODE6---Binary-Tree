@@ -139,6 +139,15 @@ class BinarySearchTreeNode:
             if self.right is None: #if it has no rightsubtree then it has left subtree
                 return self.left
 
+            #from the rightsubtree find the minimum value
+            min_val = self.right.find_min()
+            #the minimum value will be put in the current node
+            self.data = min_val
+            #delete the duplicate
+            self.right = self.right.delete(min_val)
+        
+        return self 
+
 #method that takes elements as an input and build a tree
 def build_tree(elements):
     # assigning the first element as a root node
