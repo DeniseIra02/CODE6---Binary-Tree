@@ -63,8 +63,22 @@ class BinarySearchTreeNode:
 
         return elements
     
+    #method for preorder
+    def pre_order_traversal(self):
+        # visit base node
+        elements = [self.data]
+        
+        #visit left tree
+        if self.left:
+            elements += self.left.pre_order_traversal()
+        
+        #visit right tree
+        if self.right:
+            elements += self.right.pre_order_traversal()
 
+        return elements
 
+    
 #method that takes elements as an input and build a tree
 def build_tree(elements):
     # assigning the first element as a root node
