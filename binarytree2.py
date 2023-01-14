@@ -121,6 +121,9 @@ class BinarySearchTreeNode:
         #sum up all
         return self.data + left_sum + right_sum
 
+    #method of supply some particular value and delete in the binary tree
+    def delete(self, val):
+        pass
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
