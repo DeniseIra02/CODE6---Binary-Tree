@@ -1,7 +1,7 @@
 #general tree which node can have any of the elements  
 class BinarySearchTreeNode:
     def __init__(self, data):
-        self.data = data
+        self.data = data #current node
         #leftsearchtree
         self.left = None #elements are less than the current node
         #rightsearchtree
@@ -123,7 +123,10 @@ class BinarySearchTreeNode:
 
     #method of supply some particular value and delete in the binary tree
     def delete(self, val):
-        pass
+        if val < self.data: #check if the value is less than the current node
+            if self.left: #check if it has content in left subtree
+                self.left = self.left.delete(val) #delete method (recursion)
+            
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
