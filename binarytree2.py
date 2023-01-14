@@ -126,6 +126,10 @@ class BinarySearchTreeNode:
         if val < self.data: #check if the value is less than the current node
             if self.left: #check if it has content in left subtree
                 self.left = self.left.delete(val) #delete method (recursion)
+                
+        elif val > self.data: #check if the value is greater than the current node
+            if self.right: #check if it has content in right subtree
+                self.right = self.right.delete(val) #delete method (recursion)
             
 
 #method that takes elements as an input and build a tree
@@ -140,4 +144,3 @@ def build_tree(elements):
 
 #main
 if __name__ == '__main__':
-   
