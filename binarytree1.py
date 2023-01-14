@@ -56,6 +56,13 @@ class BinarySearchTreeNode:
             else:
                 return False
         
+        if val > self.data:
+            #val might be on right subtree
+            if self.right: #check if it has any content 
+                return self.right.search(val) #search method (recursion)
+            else:
+                return False
+        
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
