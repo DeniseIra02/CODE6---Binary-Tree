@@ -26,23 +26,6 @@ class BinarySearchTreeNode:
             else:
                 self.right = BinarySearchTreeNode(data)
     
-    #method that return the list of elements in binary tree in specific order       
-    def in_order_traversal(self):
-        #add list 
-        elements = []
-        #visit left tree
-        if self.left:
-            elements += self.left.in_order_traversal()
-
-        #visit base node
-        elements.append(self.data)
-
-        #visit right tree
-        if self.right:
-            elements += self.right.in_order_traversal()
-
-        return elements
-    
     #method to search some value
     def search(self,val):
         if self.data == val: #check if the self.data is the same as the value
@@ -62,7 +45,25 @@ class BinarySearchTreeNode:
                 return self.right.search(val) #search method (recursion)
             else:
                 return False
-        
+    
+    #method for inorder       
+    def in_order_traversal(self):
+        #add list 
+        elements = []
+        #visit left tree
+        if self.left:
+            elements += self.left.in_order_traversal()
+
+        #visit base node
+        elements.append(self.data)
+
+        #visit right tree
+        if self.right:
+            elements += self.right.in_order_traversal()
+
+        return elements
+    
+
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
