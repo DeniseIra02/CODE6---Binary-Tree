@@ -10,7 +10,7 @@ class BinarySearchTreeNode:
     #method of checking the value 
     def add_child(self, data):
         if data == self.data: #see if the value already exists
-            return
+            return #node already exist
 
         #if the data is less than self.data
         if data < self.data: 
@@ -21,8 +21,8 @@ class BinarySearchTreeNode:
                 self.left = BinarySearchTreeNode(data)
         else:
             #add data in right subtree
-            if self.left: #check if the right element has value
-                self.left.add_child(data) #call child method
+            if self.right: #check if the right element has value
+                self.right.add_child(data) #call child method
             else:
                 self.right = BinarySearchTreeNode(data)
     
@@ -56,3 +56,6 @@ def build_tree(elements):
 #main
 if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
+    numbers_tree = build_tree(numbers)
+    
+    print(numbers_tree.in_order_traversal())
