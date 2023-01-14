@@ -42,4 +42,10 @@ class BinarySearchTreeNode:
             elements += self.right.in_order_traversal()
 
         return elements
-    
+
+#method that takes elements as an input and build a tree
+def build_tree(elements):
+    # assigning the first element as a root node
+    root = BinarySearchTreeNode(elements[0])
+
+   
