@@ -48,4 +48,7 @@ def build_tree(elements):
     # assigning the first element as a root node
     root = BinarySearchTreeNode(elements[0])
 
-   
+    for i in range(1,len(elements)):
+        root.add_child(elements[i]) #child method to build a tree
+
+    return root
