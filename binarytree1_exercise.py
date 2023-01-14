@@ -104,6 +104,13 @@ class BinarySearchTreeNode:
             return self.data
         return self.right.find_max() 
     
+    #method to find the lowest or smallest number
+    def find_min(self):
+        #since the rule is all elements that is less than the current node
+        #its always on the left subtree
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
 
 #method that takes elements as an input and build a tree
 def build_tree(elements):
